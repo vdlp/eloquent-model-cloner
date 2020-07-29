@@ -89,10 +89,9 @@ It is being used to make sure a unique column stays unique.
 The `Cloneable` trait adds to no-op callbacks that get called immediately before a model is saved during a duplication and immediately after: `onCloning()` and `onCloned()`.
 The `$child` parameter allows you to customize the behavior based on if it's being cloned as a relation or direct.
 
-In addition, Cloner fires the following Laravel events during cloning:
+In addition, Cloner fires events during cloning and when the model has been cloned, see:
 
-- `cloner::cloning: ModelClass`
-- `cloner::cloned: ModelClass`
+- `\Vdlp\EloquentModelCloner\Events\Cloned`
+- `\Vdlp\EloquentModelCloner\Events\Cloning`
 
-`ModelClass` is the classpath of the model being cloned.
 The event payload contains the clone and the original model instances.

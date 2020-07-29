@@ -122,7 +122,7 @@ final class Cloner
             $clone->onCloning($src, $child);
         }
 
-        $this->eventDispatcher->dispatch('cloner::cloning: ' . get_class($src), [$clone, $src]);
+        $this->eventDispatcher->dispatch(new Events\Cloning($clone, $src));
     }
 
     protected function dispatchOnClonedEvent(Model $clone, Model $src): void
@@ -132,6 +132,6 @@ final class Cloner
             $clone->onCloned($src);
         }
 
-        $this->eventDispatcher->dispatch('cloner::cloned: ' . get_class($src), [$clone, $src]);
+        $this->eventDispatcher->dispatch(new Events\Cloned($clone, $src));
     }
 }
