@@ -6,7 +6,7 @@ namespace Vdlp\EloquentModelCloner;
 
 use Illuminate\Database\Eloquent\Model;
 
-final class Cloneable
+trait Cloneable
 {
     /**
      * Return the list of attributes on this model that should be cloned
