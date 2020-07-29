@@ -1,0 +1,28 @@
+{
+    "name": "vdlp/eloquent-model-cloner",
+    "type": "library",
+    "description": "Clone eloquent models and relations",
+    "keywords": [
+        "vdlp",
+        "eloquent-model-cloner"
+    ],
+    "homepage": "https://github.com/vdlp/eloquent-model-cloner",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Van der Let & Partners",
+            "email": "octobercms@vdlp.nl"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vdlp\\EloquentModelCloner\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
